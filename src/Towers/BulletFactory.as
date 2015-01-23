@@ -4,10 +4,10 @@ package Towers
 	 * ...
 	 * @author Rishaad Hausil
 	 */
-	public class Towers 
+	public class BulletFactory 
 	{
 		
-		public function Towers() 
+		public function BulletFactory() 
 		{
 			
 		}

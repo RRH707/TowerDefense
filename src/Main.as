@@ -18,7 +18,19 @@ package
 			if (stage) init();
 			else addEventListener(Event.ADDED_TO_STAGE, init);
 			addEventListener("startGame", startGame);
+			
 			createMenu();
+			
+		}
+		
+		private function endGame(e:Event):void 
+		{
+			if (_Game != null)
+			{
+				removeChild(_Game);
+				_Game = null;
+				createMenu();
+			}
 			
 		}
 		
@@ -39,6 +51,7 @@ package
 			removeChild(_Menu);
 			_Menu = null;
 			_Game = new Game(stage);
+			_Game.addEventListener("endGame", endGame);
 			addChild(_Game);
 		}
 	}
